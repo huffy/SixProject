@@ -1,28 +1,51 @@
 fileFormatVersion: 2
 guid: 3b5b1c16b4be62447a5cf8c980763a6f
-timeCreated: 1473582167
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: samllCorner
-    21300002: bigL
-    21300004: bigCorner
-    21300006: U
-    21300008: mediumSquare
-    21300010: smallL
-    21300012: bigSquare
-    21300014: smallRect
-    21300016: mediumRect
-    21300018: bigRect
-    21300020: smallSquare
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: samllCorner
+  - first:
+      213: 21300002
+    second: bigL
+  - first:
+      213: 21300004
+    second: bigCorner
+  - first:
+      213: 21300006
+    second: U
+  - first:
+      213: 21300008
+    second: mediumSquare
+  - first:
+      213: 21300010
+    second: smallL
+  - first:
+      213: 21300012
+    second: bigSquare
+  - first:
+      213: 21300014
+    second: smallRect
+  - first:
+      213: 21300016
+    second: mediumRect
+  - first:
+      213: 21300018
+    second: bigRect
+  - first:
+      213: 21300020
+    second: smallSquare
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -31,37 +54,61 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: samllCorner
+    - serializedVersion: 2
+      name: samllCorner
       rect:
         serializedVersion: 2
         x: 0
@@ -71,14 +118,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -127.5, y: 127.5}
-        - {x: -127.5, y: -127.5}
-        - {x: 2.5, y: -127.5}
-        - {x: 2.5, y: -2.5}
-        - {x: 127.5, y: -2.5}
-        - {x: 127.5, y: 127.5}
-    - name: bigL
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigL
       rect:
         serializedVersion: 2
         x: 263
@@ -88,14 +139,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -191.5, y: 255.5}
-        - {x: -191.5, y: -255.5}
-        - {x: -61.5, y: -255.5}
-        - {x: -61.5, y: 125.5}
-        - {x: 191.5, y: 125.5}
-        - {x: 191.5, y: 255.5}
-    - name: bigCorner
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigCorner
       rect:
         serializedVersion: 2
         x: 655
@@ -105,14 +160,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -191.5, y: 191.5}
-        - {x: -191.5, y: -191.5}
-        - {x: -61.5, y: -191.5}
-        - {x: -61.5, y: 61.5}
-        - {x: 191.5, y: 61.5}
-        - {x: 191.5, y: 191.5}
-    - name: U
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: U
       rect:
         serializedVersion: 2
         x: 0
@@ -122,16 +181,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 61.5, y: 127.5}
-        - {x: 61.5, y: 2.5}
-        - {x: -61.5, y: 2.5}
-        - {x: -61.5, y: 127.5}
-        - {x: -191.5, y: 127.5}
-        - {x: -191.5, y: -127.5}
-        - {x: 191.5, y: -127.5}
-        - {x: 191.5, y: 127.5}
-    - name: mediumSquare
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumSquare
       rect:
         serializedVersion: 2
         x: 394
@@ -141,12 +202,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -127.5, y: 127.5}
-        - {x: -127.5, y: -127.5}
-        - {x: 127.5, y: -127.5}
-        - {x: 127.5, y: 127.5}
-    - name: smallL
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallL
       rect:
         serializedVersion: 2
         x: 655
@@ -156,14 +223,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -127.5, y: 191.5}
-        - {x: -127.5, y: -191.5}
-        - {x: 2.5, y: -191.5}
-        - {x: 2.5, y: 61.5}
-        - {x: 127.5, y: 61.5}
-        - {x: 127.5, y: 191.5}
-    - name: bigSquare
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigSquare
       rect:
         serializedVersion: 2
         x: 0
@@ -173,12 +244,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -191.5, y: 191.5}
-        - {x: -191.5, y: -191.5}
-        - {x: 191.5, y: -191.5}
-        - {x: 191.5, y: 191.5}
-    - name: smallRect
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallRect
       rect:
         serializedVersion: 2
         x: 394
@@ -188,12 +265,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -127.5, y: 63.5}
-        - {x: -127.5, y: -63.5}
-        - {x: 127.5, y: -63.5}
-        - {x: 127.5, y: 63.5}
-    - name: mediumRect
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediumRect
       rect:
         serializedVersion: 2
         x: 658
@@ -203,12 +286,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -159.5, y: 63.5}
-        - {x: -159.5, y: -63.5}
-        - {x: 159.5, y: -63.5}
-        - {x: 159.5, y: 63.5}
-    - name: bigRect
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigRect
       rect:
         serializedVersion: 2
         x: 398
@@ -218,12 +307,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -191.5, y: 63.5}
-        - {x: -191.5, y: -63.5}
-        - {x: 191.5, y: -63.5}
-        - {x: 191.5, y: 63.5}
-    - name: smallSquare
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallSquare
       rect:
         serializedVersion: 2
         x: 803
@@ -233,13 +328,29 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -63.5, y: 63.5}
-        - {x: -63.5, y: -63.5}
-        - {x: 63.5, y: -63.5}
-        - {x: 63.5, y: 63.5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

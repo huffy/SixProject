@@ -16,7 +16,6 @@ public class DontDestroyScript : MonoBehaviour
         //UmengGameAnalytics.instance.Init();
         //AdsController.instance.Init();
 
-        admobdemo.Instance.initAdmob();
     }
 
     // Update is called once per frame

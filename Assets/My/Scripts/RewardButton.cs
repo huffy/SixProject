@@ -33,7 +33,7 @@ public class RewardButton : MonoBehaviour
         try
         {
             //GameObject.Find("AnalyticsTools").GetComponent<TestUnityAds>().HandleShowButtonClick();
-            admobdemo.Instance.ShowRewarded();
+          
 
         }
         catch (System.Exception)
