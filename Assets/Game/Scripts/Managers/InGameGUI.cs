@@ -47,12 +47,7 @@ namespace MadFireOn
         // Use this for initialization
         void Start()
         {
-            //playGamesService = AdsClientFactory.GetPlayGamesService();
-
-            //this line of code make the default button of android  invisible
-            //*Important google feature requirement
-            //make full screen in game scene
-            Screen.fullScreen = true;
+           Screen.fullScreen = true;
 
             sound = GetComponent<AudioSource>();
             score.text = "0"; //at start the score must be zero
@@ -122,12 +117,12 @@ namespace MadFireOn
             }
 
         }
+
         IEnumerator ActivateGameOverPanel()
         {
             if (PlayerCanSeeAds.Instance.IsCanWatchMove == true)
             {
                 yield return new WaitForSeconds(1.5f);
-
 
                 gameOverPanel.SetActive(true);
             }
@@ -146,31 +141,6 @@ namespace MadFireOn
         void PauseBtn()
         {
             sound.Play();
-            try
-            {
-                //UmengGameAnalytics.instance.UpdataEvent("suspend_Click");
-            }
-            catch (System.Exception)
-            {
-                Debug.Log("suspend_Click");
-            }
-
-            ClickPoint.Instance.InterstitialADNumPause--;
-            if (ClickPoint.Instance.InterstitialADNumPause == 0)
-            {
-                try
-                {
-                    //GameObject.Find("AdsController").GetComponent<TestInterstitialAd>().HandleShowAdButtonClick();
-                }
-                catch (System.Exception)
-                {
-
-                }
-                ClickPoint.Instance.InterstitialADNumPause = 3;
-
-            }
-
-
             pausePanel.SetActive(true);
             //Time.timeScale = 0;
             gamePause = true;
@@ -186,35 +156,7 @@ namespace MadFireOn
 
         void HomeBtn()
         {
-            try
-            {
-                //playGamesService.SubmitScore("CgkIxtab18QbEAIQAQ", GameManager.instance.currentScore);
-
-            }
-            catch (System.Exception)
-            {
-
-                Debug.Log("no");
-            }
-
-            //ClickPoint.Instance.isCreatAward = false;
-
-            //ClickPoint.Instance.PuseToHome--;
-
-            //if (ClickPoint.Instance.PuseToHome==0)
-            //{
-            //    try
-            //    {
-            //        GameObject.Find("AnalyticsTools").GetComponent<TestUnityAds>().HandleShowButtonClick();
-            //    }
-            //    catch (System.Exception)
-            //    {
-
-            //    }
-            //    ClickPoint.Instance.PuseToHome = 2;
-
-            //}
-
+         
             sound.Play();
             Time.timeScale = 1;
             SceneManager.LoadScene(mainMenu);
@@ -250,42 +192,21 @@ namespace MadFireOn
         void RetryBtn()
         {
             sound.Play();
-            //score.text = "0";
-            RewardButton.instance.isButton = false;
-
-            ClickPoint.Instance.isCreatAward = true;
-
-            try
+            if (ClickPoint.Instance.isCreatAward == false)
             {
-                //UmengGameAnalytics.instance.UpdataEvent("revive_Click");
+                ClickPoint.Instance.isCreatAward = true;
+                AbsController.Instance.ShowRewardedAd(AbsController.RetryPlacementId);
             }
-            catch (System.Exception)
-            {
-                Debug.Log("revive_Click");
-            }
-
-            try
-            {
-                //GameObject.Find("AnalyticsTools").GetComponent<TestUnityAds>().HandleShowButtonClick();
-
-            }
-            catch (System.Exception)
-            {
-
-                Debug.Log("NowatchAds");
-            }
-
-            //string sceneName = SceneManager.GetActiveScene().name;
-            //SceneManager.LoadScene(sceneName);
-
-            //PlayerCanSeeAds.instance.IsCanWatchMove = false;
         }
 
         void RewardAdsBtn()
         {
             sound.Play();
-            //UnityAds.instance.ShowRewardedAd();         //uncomment after adding respective sdk
-            //AdsManager.instance.ShowRewardBasedVideo(); //choos any one to show ad
+            if (ClickPoint.Instance.isCreatAward == false)
+            {
+                ClickPoint.Instance.isCreatAward = true;
+                AbsController.Instance.ShowRewardedAd(AbsController.RewardedPlacementId);
+            }
         }
 
         void RateBtn()

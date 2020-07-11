@@ -44,7 +44,7 @@ namespace MadFireOn
             removeAdsBtn.GetComponent<Button>().onClick.AddListener(() => { RemoveAdsBtn(); });    //noAds
             soundBtn.GetComponent<Button>().onClick.AddListener(() => { SoundBtn(); });  //sound
             leaderboardBtn.GetComponent<Button>().onClick.AddListener(() => { LeaderboardBtn(); });    //leaderboard
-            achievementsBtn.GetComponent<Button>().onClick.AddListener(() => { AchievementsBtn(); });    //achievement
+            //challengeBtn.GetComponent<Button>().onClick.AddListener(() => { ChallengeBtn(); });    //achievement
             shopBtn.GetComponent<Button>().onClick.AddListener(() => { ShopBtn(); });  //Shop
             rewardAds.GetComponent<Button>().onClick.AddListener(() => { RewaradAdsBtn(); });  //reward ads
 
@@ -52,8 +52,6 @@ namespace MadFireOn
             {
                 removeAdsBtn.interactable = false;
             }
-
-
         }
 
         // Update is called once per frame
@@ -61,25 +59,15 @@ namespace MadFireOn
         {
             points.text = "" + GameManager.instance.points;
             //this is for the android default back button *Important google feature requirement
-            //if (Input.GetKeyDown(KeyCode.Escape) && !shopPanel.activeInHierarchy)
-            //{
-            //    Application.Quit();
-            //}
+            if (Input.GetKeyDown(KeyCode.Escape) && !shopPanel.activeInHierarchy)
+            {
+                Application.Quit();
+            }
         }
 
         void PlayBtn()
         {
             sound.Play();
-
-            try
-            {
-                //AnalyticsTools.Instance.GetUMAnalytics().OnEvent("start_Click");
-                //UmengGameAnalytics.instance.UpdataEvent("start_Click");
-            }
-            catch (System.Exception)
-            {
-                Debug.Log("start_Click");
-            }
 
             GameManager.instance.currentScore = 0;
             SceneManager.LoadScene(gamePlayScene);
@@ -88,15 +76,9 @@ namespace MadFireOn
 
             if (ClickPoint.Instance.InterstitialADNumStart == 0)
             {
-                try
-                {
-                    //GameObject.Find("AdsController").GetComponent<TestInterstitialAd>().HandleShowAdButtonClick();
 
-                }
-                catch (System.Exception)
-                {
+                AbsController.Instance.ShowRewardedAd(AbsController.RewardedPlacementId);
 
-                }
                 ClickPoint.Instance.InterstitialADNumStart = 3;
             }
 
@@ -132,27 +114,27 @@ namespace MadFireOn
         /// </summary>
         void RemoveAdsBtn()
         {
-            sound.Play();
+            //sound.Play();
             //Purchaser.instance.BuyNoAds(); //uncomment after adding respective sdk
             //UmengGameAnalytics.instance.PayNoADs();
-            GameManager.instance.canShowAds = false;
+            //GameManager.instance.canShowAds = false;
             //AdsController.instance.HideADs();
             //UmengGameAnalytics.instance.UpdataEvent("cost_Click");
         }
 
         void LeaderboardBtn()
         {
-            try
-            {
-                //UmengGameAnalytics.instance.UpdataEvent("rank_Click");
-            }
-            catch (System.Exception)
-            {
-                Debug.Log("rank_Click");
-            }
+            //try
+            //{
+            //    //UmengGameAnalytics.instance.UpdataEvent("rank_Click");
+            //}
+            //catch (System.Exception)
+            //{
+            //    Debug.Log("rank_Click");
+            //}
 
-            sound.Play();
-            GooglePlayManager.singleton.OpenLeaderboardsScore();
+            //sound.Play();
+            //GooglePlayManager.singleton.OpenLeaderboardsScore();
         }
 
         void AchievementsBtn()
@@ -170,10 +152,7 @@ namespace MadFireOn
         void RewaradAdsBtn()
         {
             sound.Play();
-            //AdsController.instance.ShowRewardedAd();          //uncomment after adding respective sdk
+            AbsController.Instance.ShowRewardedAd(AbsController.RewardedPlacementId);
         }
-
-
-
     }
 }//namespace

@@ -6,11 +6,6 @@ public class PlayerCanSeeAds
 {
     private static PlayerCanSeeAds instance;
 
-    private PlayerCanSeeAds()
-    {
-
-    }
-
     public static PlayerCanSeeAds Instance
     {
         get
@@ -35,13 +30,4 @@ public class PlayerCanSeeAds
 
     public bool isHaveAdsController = false;
 
-
-    void Start () {
-		
-	}
-	
-
-	void Update () {
-		
-	}
 }

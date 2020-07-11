@@ -23,8 +23,12 @@ public class RewardButton : MonoBehaviour
         Debug.Log("isButton: " + isButton);
     }
 
-    public void Rewaed()
+    public void Reward()
     {
+        if (ClickPoint.Instance.isCreatAward)
+        {
+            return;
+        }
         ClickPoint.Instance.isCreatAward = true;
 
 
@@ -32,9 +36,7 @@ public class RewardButton : MonoBehaviour
 
         try
         {
-            //GameObject.Find("AnalyticsTools").GetComponent<TestUnityAds>().HandleShowButtonClick();
-          
-
+            AbsController.Instance.ShowRewardedAd(AbsController.RewardedPlacementId);
         }
         catch (System.Exception)
         {
@@ -72,14 +74,6 @@ public class RewardButton : MonoBehaviour
 
     public void AddPlayerScore()
     {
-        try
-        {
-            //UmengGameAnalytics.instance.UpdataEvent("reward_Click");
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("reward_Click");
-        }
 
         AddplayerScore = Random.Range(45, 50) * 5;
         Debug.Log("Down");
